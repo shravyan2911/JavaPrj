@@ -1,0 +1,49 @@
+﻿
+
+
+public class StringDuplicateRemoval 
+{
+	
+
+	String removeDuplicates(String string,int intValue)
+	{
+		int i,j=0;
+		
+		StringBuilder sb = new StringBuilder(string); 
+	    for(i=0; i<sb.length()-1;i++)
+	    {
+	    	 if(intValue==1)
+		       {
+		    	   if(sb.charAt(i)==sb.charAt(i+1))
+		    	   {
+		    		   sb.deleteCharAt(i);
+		    	   }
+		       }
+	       if(intValue==2)
+	       {
+	    	   if(sb.charAt(i)==sb.charAt(i+1))
+	    	   {
+	    		   sb.deleteCharAt(i);
+	    	   }
+	       }
+	       
+	       
+	    }
+
+	    return sb.toString();
+	}
+	public static void main(String[] args) 
+	{
+		StringDuplicateRemoval sdr=new StringDuplicateRemoval();
+		String k1=sdr.removeDuplicates("aabbaa",1);
+		String k2=sdr.removeDuplicates("aabbcc",1);
+		String k3=sdr.removeDuplicates("aaab",2);
+		
+		System.out.println(k1);
+		System.out.println(k2);
+		System.out.println(k3);
+	
+	}
+
+
+}
